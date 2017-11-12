@@ -76,3 +76,4 @@ class DCGANG(nn.Module):
         if isinstance(input.data, torch.cuda.FloatTensor) :
             gpu_ids = range(1)
         return nn.parallel.data_parallel(self.main, input, gpu_ids)
+
